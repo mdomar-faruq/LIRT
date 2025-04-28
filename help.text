@@ -1,0 +1,44 @@
+Laravel , Inertia , React , Tailwind
+https://www.youtube.com/watch?v=qBxo6hW83jU&list=PL38wFHH4qYZVOnXxcS0NMGGmUsZky6JNG&index=1
+
+---install laravel (use composer)--
+composer create-project laravel/laravel project_name 
+
+--install react--
+npm i react react-dom
+
+--react framework--
+npm install --save-dev @vitejs/plugin-react
+
+
+--install inertia (follow offcial website)--
+composer require inertiajs/inertia-laravel
+
+--inertia middleware--
+php artisan inertia:middleware
+
+--bootstrap->app add code with middleware--
+ $middleware->web(append: [
+        HandleInertiaRequests::class,
+    ]);
+
+-- client side inertia--
+--install dependenci--
+
+npm install @inertiajs/react
+
+
+--add Initialize the Inertia app--
+--resources->js->app.jsx add code Inertia component--
+--vite.config.js add code-
+
+--app.blade.php add code before vite--
+@viteReactRefresh
+
+
+--install talwind css (follow offcial website) --
+npm install tailwindcss @tailwindcss/vite
+
+--run project--
+php artisan serve
+npm run dev
